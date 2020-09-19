@@ -1,7 +1,7 @@
 import React from 'react';
-import { FontAwesome as Icon } from '@expo/vector-icons'
+import { FontAwesome as Icon } from '@expo/vector-icons';
 import { View, Text, StyleSheet, Image, Alert } from 'react-native';
-import { RectButton } from 'react-native-gesture-handler'
+import { RectButton } from 'react-native-gesture-handler';
 import Header from '../../componets/Header';
 import { useNavigation } from '@react-navigation/native';
 
@@ -57,17 +57,17 @@ const styles = StyleSheet.create({
     color: '#00D4FF',
     fontSize: 36,
     fontWeight: 'bold',
-    marginTop: 31,
+    marginTop: 15,
     fontFamily: "Play_700Bold",
   },
   subTitle: {
     color: '#ED7947',
     fontSize: 21,
-    marginTop: 15,
+    marginTop: 5,
     fontFamily: "Play_400Regular",
   },
   footer: {
-    marginTop: '15%',
+    marginTop: '5%',
     alignItems: 'center'
   },
   button: {
