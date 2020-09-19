@@ -22,7 +22,7 @@ const initialPieData = {
     series: []
 }
 
-const BASE_URL = 'http://localhost:8080'
+const BASE_URL = 'https://sds1-jeancoelho.herokuapp.com';
 
 const Charts = () => {
     
@@ -59,7 +59,7 @@ const Charts = () => {
                         <Chart 
                             options={barOptions}
                             type="bar"
-                            width="900"
+                            width="730"
                             height="650"
                             series={[{ data: barChartData }]}
                         />
