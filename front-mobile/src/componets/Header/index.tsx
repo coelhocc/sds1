@@ -1,13 +1,25 @@
+import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
+import { TouchableWithoutFeedback } from 'react-native-gesture-handler';
 
 const Header = () => {
+    const navigation = useNavigation(); //Essa função vai permitir que naveguemos entra as rotas
+
+    const handleOnPress = () => {
+        //Alert.alert('Você clicou no botão!')
+        navigation.navigate('Home');
+
+    }
+
     return (
-        <View style={styles.header}>
-            <Image source={require('../../assets/logo.png')} style={styles.tinyLogo} />
-            <Text style={styles.textLogo1}>BIG GAME</Text>
-            <Text style={styles.textLogo2}>SURVEY</Text>
-        </View>
+        <TouchableWithoutFeedback onPress={handleOnPress}>
+            <View style={styles.header}>
+                <Image source={require('../../assets/logo.png')} style={styles.tinyLogo} />
+                <Text style={styles.textLogo1}>BIG GAME</Text>
+                <Text style={styles.textLogo2}>SURVEY</Text>
+            </View>
+        </TouchableWithoutFeedback>
     )
 };
 

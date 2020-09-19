@@ -2,14 +2,22 @@ import React from 'react';
 import { FontAwesome as Icon } from '@expo/vector-icons'
 import { View, Text, StyleSheet, Image, Alert } from 'react-native';
 import { RectButton } from 'react-native-gesture-handler'
+import Header from '../../componets/Header';
+import { useNavigation } from '@react-navigation/native';
 
 const Home = () => {
 
+  const navigation = useNavigation(); //Essa função vai permitir que naveguemos entra as rotas
+
   const handleOnPress = () => {
-    Alert.alert('Você clicou no botão!')
+    //Alert.alert('Você clicou no botão!')
+    navigation.navigate('CreateRecord');
+
   }
+  
   return (
     <>
+      <Header />
       <View style={styles.container}>
         <Image
           source={require('../../assets/gamer.png')}
